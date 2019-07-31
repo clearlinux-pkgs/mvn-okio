@@ -4,17 +4,20 @@
 #
 Name     : mvn-okio
 Version  : 1.4.0
-Release  : 2
+Release  : 3
 URL      : https://github.com/square/okio/archive/okio-parent-1.4.0.tar.gz
 Source0  : https://github.com/square/okio/archive/okio-parent-1.4.0.tar.gz
 Source1  : https://repo.maven.apache.org/maven2/com/squareup/okio/okio-parent/1.13.0/okio-parent-1.13.0.pom
 Source2  : https://repo.maven.apache.org/maven2/com/squareup/okio/okio-parent/1.6.0/okio-parent-1.6.0.pom
-Source3  : https://repo1.maven.org/maven2/com/squareup/okio/okio/1.13.0/okio-1.13.0.jar
-Source4  : https://repo1.maven.org/maven2/com/squareup/okio/okio/1.13.0/okio-1.13.0.pom
-Source5  : https://repo1.maven.org/maven2/com/squareup/okio/okio/1.4.0/okio-1.4.0.jar
-Source6  : https://repo1.maven.org/maven2/com/squareup/okio/okio/1.4.0/okio-1.4.0.pom
-Source7  : https://repo1.maven.org/maven2/com/squareup/okio/okio/1.6.0/okio-1.6.0.jar
-Source8  : https://repo1.maven.org/maven2/com/squareup/okio/okio/1.6.0/okio-1.6.0.pom
+Source3  : https://repo1.maven.org/maven2/com/squareup/okio/okio-parent/1.12.0/okio-parent-1.12.0.pom
+Source4  : https://repo1.maven.org/maven2/com/squareup/okio/okio/1.12.0/okio-1.12.0.jar
+Source5  : https://repo1.maven.org/maven2/com/squareup/okio/okio/1.12.0/okio-1.12.0.pom
+Source6  : https://repo1.maven.org/maven2/com/squareup/okio/okio/1.13.0/okio-1.13.0.jar
+Source7  : https://repo1.maven.org/maven2/com/squareup/okio/okio/1.13.0/okio-1.13.0.pom
+Source8  : https://repo1.maven.org/maven2/com/squareup/okio/okio/1.4.0/okio-1.4.0.jar
+Source9  : https://repo1.maven.org/maven2/com/squareup/okio/okio/1.4.0/okio-1.4.0.pom
+Source10  : https://repo1.maven.org/maven2/com/squareup/okio/okio/1.6.0/okio-1.6.0.jar
+Source11  : https://repo1.maven.org/maven2/com/squareup/okio/okio/1.6.0/okio-1.6.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -45,23 +48,32 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio-
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio-parent/1.6.0
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio-parent/1.6.0/okio-parent-1.6.0.pom
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.13.0
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.13.0/okio-1.13.0.jar
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio-parent/1.12.0
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio-parent/1.12.0/okio-parent-1.12.0.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.12.0
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.12.0/okio-1.12.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.12.0
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.12.0/okio-1.12.0.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.13.0
-cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.13.0/okio-1.13.0.pom
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.13.0/okio-1.13.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.13.0
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.13.0/okio-1.13.0.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.4.0
-cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.4.0/okio-1.4.0.jar
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.4.0/okio-1.4.0.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.4.0
-cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.4.0/okio-1.4.0.pom
+cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.4.0/okio-1.4.0.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.6.0
-cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.6.0/okio-1.6.0.jar
+cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.6.0/okio-1.6.0.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.6.0
-cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.6.0/okio-1.6.0.pom
+cp %{SOURCE11} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/1.6.0/okio-1.6.0.pom
 
 
 %files
@@ -69,8 +81,11 @@ cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okio/okio/
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/com/squareup/okio/okio-parent/1.12.0/okio-parent-1.12.0.pom
 /usr/share/java/.m2/repository/com/squareup/okio/okio-parent/1.13.0/okio-parent-1.13.0.pom
 /usr/share/java/.m2/repository/com/squareup/okio/okio-parent/1.6.0/okio-parent-1.6.0.pom
+/usr/share/java/.m2/repository/com/squareup/okio/okio/1.12.0/okio-1.12.0.jar
+/usr/share/java/.m2/repository/com/squareup/okio/okio/1.12.0/okio-1.12.0.pom
 /usr/share/java/.m2/repository/com/squareup/okio/okio/1.13.0/okio-1.13.0.jar
 /usr/share/java/.m2/repository/com/squareup/okio/okio/1.13.0/okio-1.13.0.pom
 /usr/share/java/.m2/repository/com/squareup/okio/okio/1.4.0/okio-1.4.0.jar
